@@ -52,7 +52,7 @@
       <a href="#contact">Contact</a>
     </nav>
     <button class="theme" id="theme" type="button" aria-pressed="false" aria-label="Switch to light mode"><svg class="moon" aria-hidden="true"><use href="#i-moon"/></svg><svg class="sun" aria-hidden="true"><use href="#i-sun"/></svg></button>
-    <a class="btn btn-gold" href="https://github.com/mathanmj92/manimo/releases/download/v1.9.5/Manimo-Setup-1.9.5.exe">Download</a>
+    <a class="btn btn-gold" href="https://github.com/mathanmj92/manimo/releases/download/v1.9.7/Manimo-Setup-1.9.7.exe">Download</a>
   </div>
 </header>
 
@@ -65,10 +65,10 @@
       <h1><span>Math,</span><span>in motion.</span></h1>
       <p class="lead">Write the animation, render it, give it a voice, and edit your scenes into one finished lesson. Everything runs on your own Windows PC.</p>
       <div class="cta">
-        <a class="btn btn-gold" href="https://github.com/mathanmj92/manimo/releases/download/v1.9.5/Manimo-Setup-1.9.5.exe"><svg aria-hidden="true"><use href="#i-win"/></svg>Download for Windows, free</a>
+        <a class="btn btn-gold" href="https://github.com/mathanmj92/manimo/releases/download/v1.9.7/Manimo-Setup-1.9.7.exe"><svg aria-hidden="true"><use href="#i-win"/></svg>Download for Windows, free</a>
         <a class="btn btn-line" href="#lesson">Watch a lesson made with it</a>
       </div>
-      <p class="fine">241&nbsp;MB. Windows only for now. Installs for one user, works offline, no account.</p>
+      <p class="fine">335&nbsp;MB. Windows only for now. Installs for one user, works offline, no account.</p>
     </div>
     <div class="scene">
       <div class="scene-frame">
@@ -171,6 +171,10 @@
       <h2>Prompt library</h2>
       <p class="lead">Pick a topic and its prompt is ready to copy, with the equations and a worked example already in. More topics in maths and physics are added over time.</p>
     </div>
+    <figure class="shot">
+      <div class="frame"><img src="assets/img/library-problems.webp" width="1520" height="1520" alt="The prompt library inside Manimo filtered to Problems: a block on a rough incline, beam support reactions, projectile motion, resultant of two forces, two masses over a pulley, a ladder against a wall and the angle at the centre of a circle. Each has Use in Ask AI and Copy prompt buttons." loading="lazy"></div>
+      <figcaption>Inside the app, the library also has ready <b>problem</b> and <b>theory</b> prompts: solve a mechanics or geometry problem step by step, or teach quantum, thermodynamics, Fourier series and relativity as a lesson. One click sends it to the assistant.</figcaption>
+    </figure>
     <div class="chips" role="group" aria-label="Filter by subject" id="lib-filter"></div>
     <ul class="plib" id="plib"></ul>
     <p class="soft" style="margin-top:22px">Missing a topic? <a href="mailto:mathannits92@gmail.com?subject=Manimo%20prompt%20request">Ask for it by email</a> and it goes on the list.</p>
@@ -212,6 +216,26 @@
   </div>
 </section>
 
+<!-- ============ code check ============ -->
+<section class="pad hair" id="check">
+  <div class="wrap split flip">
+    <figure class="shot">
+      <div class="frame"><img src="assets/img/code-check.webp" width="1600" height="1580" alt="A scene pasted into Manimo. A panel above the status bar lists two problems: m.Circl does not exist, did you mean m.Circle, and m.Creat does not exist, did you mean m.Create." loading="lazy"></div>
+      <figcaption>Two typos in pasted code, found before rendering. Each one links to its line.</figcaption>
+    </figure>
+    <div class="copy">
+      <h2>Mistakes caught before you render</h2>
+      <p class="lead">Paste code from an AI or a friend and Manimo reads it first. If something is wrong it says what and where, in plain words.</p>
+      <ul class="points">
+        <li><b>Names that do not exist</b> are found, with a suggestion: &ldquo;did you mean <code translate="no">m.Circle</code>?&rdquo;</li>
+        <li><b>Missing pieces</b> such as a scene to render, the import line, or the <code translate="no">construct</code> method.</li>
+        <li><b>Unsafe code is flagged</b> before anything runs.</li>
+        <li><b>Layout check on request.</b> Manimo runs the scene and finds text that overlaps or leaves the picture.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- ============ render ============ -->
 <section class="pad hair" id="render">
   <div class="wrap split">
@@ -237,18 +261,32 @@
   <div class="wrap split">
     <div class="copy">
       <h2>Give your lesson a voice</h2>
-      <p class="lead">4 voices come inside the app. They run on your PC, need no key and no internet, and speak in time with your animation.</p>
+      <p class="lead">14 voices come inside the app, female and male, American and British. They run on your PC, need no key and no internet, and speak in time with your animation.</p>
       <p>Write <code translate="no">self.say("Here is a circle, and a point moving around it.")</code> and the words are spoken as the animation plays. Words in square brackets decide when each animation starts.</p>
       <p>The built-in voices speak English. For Tamil or any other language, record your own voice over the video.</p>
       <ul class="formats" aria-label="Script export formats"><li>.txt</li><li>.srt</li><li>.vtt</li><li>.json</li></ul>
       <p class="soft">Every narrated line can be exported with its time, for subtitles or review.</p>
     </div>
     <div>
+      <h3 class="vgroup">Female voices</h3>
+      <ul class="voices">
+        <li><button class="play" type="button" data-src="assets/audio/nicole.m4a" data-name="Nicole" aria-pressed="false" aria-label="Play the Nicole sample"><svg aria-hidden="true"><use href="#i-play"/></svg></button><div class="who"><b>Nicole</b><span>American, soft and calm</span></div><div class="meter" aria-hidden="true"><i></i></div></li>
+        <li><button class="play" type="button" data-src="assets/audio/heart.m4a" data-name="Heart" aria-pressed="false" aria-label="Play the Heart sample"><svg aria-hidden="true"><use href="#i-play"/></svg></button><div class="who"><b>Heart</b><span>American, warm and natural</span></div><div class="meter" aria-hidden="true"><i></i></div></li>
+        <li><button class="play" type="button" data-src="assets/audio/bella.m4a" data-name="Bella" aria-pressed="false" aria-label="Play the Bella sample"><svg aria-hidden="true"><use href="#i-play"/></svg></button><div class="who"><b>Bella</b><span>American, bright and expressive</span></div><div class="meter" aria-hidden="true"><i></i></div></li>
+        <li><button class="play" type="button" data-src="assets/audio/sarah.m4a" data-name="Sarah" aria-pressed="false" aria-label="Play the Sarah sample"><svg aria-hidden="true"><use href="#i-play"/></svg></button><div class="who"><b>Sarah</b><span>American, clear and friendly</span></div><div class="meter" aria-hidden="true"><i></i></div></li>
+        <li><button class="play" type="button" data-src="assets/audio/sky.m4a" data-name="Sky" aria-pressed="false" aria-label="Play the Sky sample"><svg aria-hidden="true"><use href="#i-play"/></svg></button><div class="who"><b>Sky</b><span>American, light and youthful</span></div><div class="meter" aria-hidden="true"><i></i></div></li>
+        <li><button class="play" type="button" data-src="assets/audio/emma.m4a" data-name="Emma" aria-pressed="false" aria-label="Play the Emma sample"><svg aria-hidden="true"><use href="#i-play"/></svg></button><div class="who"><b>Emma</b><span>British, clear</span></div><div class="meter" aria-hidden="true"><i></i></div></li>
+        <li><button class="play" type="button" data-src="assets/audio/isabella.m4a" data-name="Isabella" aria-pressed="false" aria-label="Play the Isabella sample"><svg aria-hidden="true"><use href="#i-play"/></svg></button><div class="who"><b>Isabella</b><span>British, warm</span></div><div class="meter" aria-hidden="true"><i></i></div></li>
+      </ul>
+      <h3 class="vgroup">Male voices</h3>
       <ul class="voices">
         <li><button class="play" type="button" data-src="assets/audio/adam.m4a" data-name="Adam" aria-pressed="false" aria-label="Play the Adam sample"><svg aria-hidden="true"><use href="#i-play"/></svg></button><div class="who"><b>Adam</b><span>American, deep and steady</span></div><div class="meter" aria-hidden="true"><i></i></div></li>
         <li><button class="play" type="button" data-src="assets/audio/echo.m4a" data-name="Echo" aria-pressed="false" aria-label="Play the Echo sample"><svg aria-hidden="true"><use href="#i-play"/></svg></button><div class="who"><b>Echo</b><span>American, clear and friendly</span></div><div class="meter" aria-hidden="true"><i></i></div></li>
-        <li><button class="play" type="button" data-src="assets/audio/nicole.m4a" data-name="Nicole" aria-pressed="false" aria-label="Play the Nicole sample"><svg aria-hidden="true"><use href="#i-play"/></svg></button><div class="who"><b>Nicole</b><span>American, soft and calm</span></div><div class="meter" aria-hidden="true"><i></i></div></li>
+        <li><button class="play" type="button" data-src="assets/audio/michael.m4a" data-name="Michael" aria-pressed="false" aria-label="Play the Michael sample"><svg aria-hidden="true"><use href="#i-play"/></svg></button><div class="who"><b>Michael</b><span>American, confident and clear</span></div><div class="meter" aria-hidden="true"><i></i></div></li>
+        <li><button class="play" type="button" data-src="assets/audio/eric.m4a" data-name="Eric" aria-pressed="false" aria-label="Play the Eric sample"><svg aria-hidden="true"><use href="#i-play"/></svg></button><div class="who"><b>Eric</b><span>American, even and patient</span></div><div class="meter" aria-hidden="true"><i></i></div></li>
         <li><button class="play" type="button" data-src="assets/audio/lewis.m4a" data-name="Lewis" aria-pressed="false" aria-label="Play the Lewis sample"><svg aria-hidden="true"><use href="#i-play"/></svg></button><div class="who"><b>Lewis</b><span>British, warm</span></div><div class="meter" aria-hidden="true"><i></i></div></li>
+        <li><button class="play" type="button" data-src="assets/audio/george.m4a" data-name="George" aria-pressed="false" aria-label="Play the George sample"><svg aria-hidden="true"><use href="#i-play"/></svg></button><div class="who"><b>George</b><span>British, authoritative</span></div><div class="meter" aria-hidden="true"><i></i></div></li>
+        <li><button class="play" type="button" data-src="assets/audio/daniel.m4a" data-name="Daniel" aria-pressed="false" aria-label="Play the Daniel sample"><svg aria-hidden="true"><use href="#i-play"/></svg></button><div class="who"><b>Daniel</b><span>British, calm</span></div><div class="meter" aria-hidden="true"><i></i></div></li>
       </ul>
       <p class="fine soft" style="margin-top:14px">Each sample says: “Here is a circle. Watch a sine wave grow out of it.”</p>
     </div>
@@ -280,6 +318,25 @@
 </section>
 
 <!-- ============ why (marigold band) ============ -->
+<!-- ============ updates ============ -->
+<section class="pad hair" id="updates">
+  <div class="wrap stack">
+    <div class="head">
+      <h2>It tells you when there is a new version</h2>
+      <p class="lead">Manimo looks for a newer release on GitHub when it starts, downloads it quietly in the background, and checks it against its published checksum.</p>
+    </div>
+    <figure class="shot">
+      <div class="frame"><img src="assets/img/update-bar.webp" width="2880" height="300" alt="A bar under the Manimo toolbar reads: Manimo 9.9.9 is ready to install. It was checked against its published checksum. Manimo closes while it installs, and your code is kept. An Install and restart button sits at its right." loading="lazy"></div>
+      <figcaption>The update bar, shown here with a test release numbered 9.9.9. You choose when to press Install and restart.</figcaption>
+    </figure>
+    <ul class="points">
+      <li><b>You choose when to install.</b> Nothing is installed until you press the button, and your code is kept.</li>
+      <li><b>Nothing about you is sent.</b> Only the version number is read. Both switches are in Settings if you prefer to update by hand.</li>
+    </ul>
+    <p class="soft">Updating starts from version 1.9.6. Earlier versions need one manual install first.</p>
+  </div>
+</section>
+
 <section class="pad band-accent" id="why">
   <div class="wrap">
     <div class="head"><h2>Why it earns its place</h2><p class="lead">Making a lesson video usually means stitching several tools together. Manimo puts the whole chain in one app.</p></div>
@@ -352,9 +409,9 @@
   <div class="wrap">
     <svg class="mini" aria-hidden="true"><use href="#i-logo"/></svg>
     <h2>Make your next lesson move.</h2>
-    <p class="lead">Free for Windows. 241&nbsp;MB. Works offline.</p>
-    <a class="btn btn-gold" href="https://github.com/mathanmj92/manimo/releases/download/v1.9.5/Manimo-Setup-1.9.5.exe"><svg aria-hidden="true"><use href="#i-win"/></svg>Download for Windows, free</a>
-    <p class="hash">Version 1.9.5. SHA-256 <span translate="no">6022C65E0269A0351053CA8F2F3EFD1A3CDF54BF4AA4CC9DCA53417F9CAC9F66</span></p>
+    <p class="lead">Free for Windows. 335&nbsp;MB. Works offline.</p>
+    <a class="btn btn-gold" href="https://github.com/mathanmj92/manimo/releases/download/v1.9.7/Manimo-Setup-1.9.7.exe"><svg aria-hidden="true"><use href="#i-win"/></svg>Download for Windows, free</a>
+    <p class="hash">Version 1.9.7. SHA-256 <span translate="no">B5C5A7611DD439D038C284A85C3251BE8ED1A03E151D0923A364DAC9424D3110</span></p>
   </div>
 </section>
 
@@ -363,7 +420,6 @@
 <footer>
   <div class="wrap">
     <p>Made by <a href="https://mathanmj92.github.io/mathan/">Mathan Kumar P</a>, Physics and Electrochemistry, Coimbatore, India.</p>
-    <p><a href="https://github.com/mathanmj92/manimo">Manimo on GitHub</a>: source code, releases and issues. Open source under the MIT licence.</p>
     <p translate="no">Built with Claude. With thanks to <a href="https://manimgx.academa.ai/">ManimGX</a> and <a href="https://docs.manim.community/">Manim Community Edition</a>, each under its own licence.</p>
   </div>
 </footer>

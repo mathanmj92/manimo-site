@@ -288,3 +288,10 @@ footer p { max-width: 58ch; }
 .plib .acts { display: flex; gap: 8px; flex-wrap: wrap; }
 .plib .btn { min-height: 40px; padding: 0 16px; font-size: .92rem; }
 @media (max-width: 700px) { .plib li { grid-template-columns: 1fr; } }
+
+.vgroup { font: 700 1.05rem/1.2 var(--font-display); letter-spacing: .01em; color: var(--text-2); margin: 28px 0 10px; }
+.vgroup:first-child { margin-top: 0; }
+
+#voices .wrap.split { align-items: start; }
+#voices .copy { position: sticky; top: 96px; }
+@media (max-width: 860px) { #voices .copy { position: static; } }
